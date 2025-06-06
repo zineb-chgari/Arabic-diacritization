@@ -1,0 +1,36 @@
+/* App.css */
+
+.App {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+/* Pseudo-élément pour le background avec opacité */
+.App::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('./diacritizer/assets/tashkeel_2-297.webp'); /* ✅ Utilise un chemin relatif depuis le fichier CSS */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.6;
+  z-index: -1;
+}
+
+/* Contenu au-dessus du background */
+.Content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
